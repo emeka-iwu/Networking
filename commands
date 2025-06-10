@@ -1,0 +1,13 @@
+/var/www/html/index.html #stores html file for apache
+/etc/httpd/conf/httpd.conf #holds apache config files
+/etc/ssh/sshd_config #holds ssh connection fils
+sudo firewall-cmd --list-all #lists all firewall connection
+sudo firewall-cmd --list-services #list services allowed on firewall
+sudo firewall-cmd --list-ports #lists open ports on firwall
+sudo firewall-cmd --add-service=http --permanent #adds http servcie to firewall
+sudo firewall-cmd --add-service=https --permanent #adds https service to firewall
+sudo firewall-cmd --add-port=80/tcp --permanent #adds port 80 which is also http
+sudo firewall-cmd --add-port=443/tcp --permanent #adds port 443 to firewall which is also https
+sudo firewall-cmd --reload #reloads firewall
+sudo systemctl restart firewalld #restarts firewall daemon
+
