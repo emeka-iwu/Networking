@@ -52,3 +52,10 @@ There are 7 OSI model layers;
 
 level 5,6, and 7 are handled in the browser.
 
+## VPC (Virtual Private Cloud)
+
+a vpc is like a bug estate that houses multiple application. it is accesse through a gateway that holds a public subnet. When a request is made,after accessing the gateway, connections are made to applications within the vp through the load balancers that connect eat app through the routing table. each application can be assessed depending on security group configuration.
+
+VPC >>> GATEWAY >>> PUBLIC SUBNET >>> LOAD BALACER >>> ROUTING TABLE >>> SECURITY GROUP >>> APPLICATION.
+
+ 
