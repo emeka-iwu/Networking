@@ -10,4 +10,7 @@ sudo firewall-cmd --add-port=80/tcp --permanent #adds port 80 which is also http
 sudo firewall-cmd --add-port=443/tcp --permanent #adds port 443 to firewall which is also https
 sudo firewall-cmd --reload #reloads firewall
 sudo systemctl restart firewalld #restarts firewall daemon
+sudo firewall-cmd --zone=public --add-port=8080/tcp #this adds a custom port 8080 to firewall and listens. however not --permanent
+python -m http.server 8080 #this launches a python http server listening on port 8080. port 8080 has to be added to firewall first
+
 
