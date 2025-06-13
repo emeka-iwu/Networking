@@ -12,5 +12,5 @@ sudo firewall-cmd --reload #reloads firewall
 sudo systemctl restart firewalld #restarts firewall daemon
 sudo firewall-cmd --zone=public --add-port=8080/tcp #this adds a custom port 8080 to firewall and listens. however not --permanent
 python -m http.server 8080 #this launches a python http server listening on port 8080. port 8080 has to be added to firewall first
-
-
+sudo firewall-cmd --get-active-zones #this gets the zone of firewall-cmd
+sudo firewall-cmd --state #this shows the state of firewall
